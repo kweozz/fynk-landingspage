@@ -1,0 +1,443 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background:
+        linear-gradient(20deg,
+            rgba(252, 252, 252, 0.2) 0%,
+            rgba(252, 252, 252, 0.2) 60%,
+            rgba(196, 207, 255, 0.2) 90%,
+            rgba(156, 128, 255, 0.2) 100%),
+        #fcfcfc;
+    /* ondergrondkleur */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #1C2133;
+}
+
+.hero {
+    position: relative;
+    padding: 5% 10%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    max-height: fit-content;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at 30% 30%, #ECEFFD, #C4CFFF, #FCFCFC);
+    background-size: 200% 200%;
+    animation: gradientMove 10s ease-in-out infinite alternate;
+    z-index: -1;
+    opacity: 0.6;
+    filter: blur(80px);
+}
+
+@keyframes gradientMove {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(20%, 10%);
+    }
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+}
+
+.logo {
+    z-index: 40;
+    position: relative;
+}
+
+.logo img {
+    height: 36px;
+
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 0;
+    padding: 0%;
+    width: 100%;
+    width: auto;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #1C2133;
+    font-weight: 500;
+}
+
+.nav-cta {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Fynk-style Burger Button */
+.burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    width: 44px;
+    height: 44px;
+    border: none;
+    cursor: pointer;
+    z-index: 30;
+    background: transparent;
+    /* Add this */
+}
+
+
+.burger span {
+    display: block;
+    width: 24px;
+    height: 3px;
+    background: #1C2133;
+    /* Fynk dark blue */
+    border-radius: 6px;
+    transition: 0.4s ease;
+}
+
+.nav-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 15;
+    background: linear-gradient(135deg, rgba(236, 239, 253, 0.85) 0%, rgba(196, 207, 255, 0.85) 100%);
+    /* Add alpha for transparency */
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s cubic-bezier(.4, 0, .2, 1);
+}
+
+.nav-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Mobile Navigation */
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    font-size: 1.8rem;
+    position: absolute;
+    top: 5.5rem;
+    left: 50%;
+    transform: translateX(-50%) translateY(-20px);
+    width: 90%;
+    background: #F5F4FC;
+    /* Very soft pastel background */
+    border-radius: 24px;
+    padding: 2rem;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 20;
+}
+
+.nav-menu.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-outline {
+    font-size: 1rem !important;
+    /* Force same size everywhere */
+    padding: 0.75rem 1.5rem;
+    border-radius: 16px;
+    text-decoration: none;
+    font-weight: 600;
+    text-align: center;
+    border: none;
+    outline: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-primary,
+.btn-secondary {
+    background-color: #1C2133;
+    color: white;
+}
+
+.btn-outline {
+    border: 1.5px solid #1C2133;
+    color: #1C2133;
+    background: transparent;
+}
+
+.btn-outline:hover {
+    background-color: #1C2133;
+    color: white;
+}
+
+
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5rem;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.hero-text {
+    max-width: 100%;
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    font-family: cabin;
+}
+
+.hero-text h1 span {
+    color: #9CB0FF;
+}
+
+.hero-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.btn-primary {
+    background-color: #1C2133;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 16px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.store-badges img {
+    height: 40px;
+    margin-right: 1rem;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 100%;
+}
+
+/* trustedbysection */
+.trusted-by {
+    padding: 5% 10%;
+    text-align: center;
+
+}
+
+.section-title {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #9CB0FF;
+    margin-bottom: 2rem;
+}
+
+.logo-slider {
+    position: relative;
+    overflow: hidden;
+    mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+}
+
+
+.logo-track {
+    display: flex;
+    width: calc(250px * 10);
+    /* 10 logo's in totaal (5 herhaald) */
+    animation: scroll 30s linear infinite;
+    gap: 2rem;
+}
+
+.logo-track img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+    padding: 1rem 2rem;
+    background: #f5f5f5;
+    border-radius: 10px;
+}
+
+/* -------------------------------------------------------------------------------------------------
+   Het focusprobleem bij jongeren
+   ------------------------------------------------------------------------------------------------- */
+/* Focusprobleem sectie zoals voorbeeld */
+
+.problem-cards {
+    flex-direction: column;
+    gap: 2rem;
+}
+.section-cards {
+  display: flex;
+  flex-direction: column;
+  background-color: #C4CFFF;
+  border-radius: 24px;
+  margin: 5% 5%;
+  padding: 2rem 1rem; /* <-- voeg links en rechts padding toe */
+  gap: 2rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    font-family: cabin;
+    padding-bottom: 1rem;
+    padding: 0% 10%;
+    margin: 0%;
+}
+
+
+.image-card,
+.text-card {
+  background-color: #FCFCFC;
+  border-radius: 16px;
+}
+
+
+.image-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+}
+
+.text-card h3 {
+  font-size: clamp(1.4rem, 4vw, 2rem);
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.text-card .lead,
+.text-card p {
+  font-size: clamp(1rem, 3vw, 1.1rem);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+.text-card p{
+    color: #606370;
+}
+
+
+
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Show nav horizontally on larger screens */
+@media (min-width: 900px) {
+    .burger {
+        display: none;
+    }
+
+    div.hero-content {
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    .nav-menu {
+        display: flex !important;
+        flex-direction: row;
+        align-items: center;
+        position: static;
+        background: none;
+        box-shadow: none;
+        padding: 0;
+        gap: 2rem;
+        width: auto;
+        opacity: 1;
+        pointer-events: auto;
+        transform: none;
+        font-size: 1.2rem;
+        transition: none !important;
+    }
+
+    .hero-text h1 {
+        font-size: 3.5rem;
+    }
+
+    .hero-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 4rem;
+    }
+
+    .hero-image {
+        max-width: 50%;
+        order: 2;
+    }
+
+    .hero-text {
+        max-width: 40%;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        gap: 2rem;
+        font-size: 1em;
+    }
+
+      .section-cards {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 5% 10%;
+    margin: 5% 10%;
+    gap: 2rem;
+  }
+
+  .image-card {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .text-card {
+    width: 60%;
+    padding: 2rem;
+  }
+}
