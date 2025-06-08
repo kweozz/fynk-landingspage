@@ -399,6 +399,86 @@ h2 {
     background: #FAFAF9;
 }
 
+.testimonials {
+  padding: 5% 10%;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-family: 'Cabin', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+
+.testimonial-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.testimonial-card {
+  background-color: #F5F5F5;
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.testimonial-card p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #1C2133;
+  font-weight: 500;
+}
+
+.stars {
+  color: #9CB0FF;
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.user img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.user-info strong {
+  font-weight: 600;
+  color: #1C2133;
+}
+
+.user-info span {
+  font-size: 0.95rem;
+  color: #606370;
+}
+
+@media (min-width: 900px) {
+  .testimonial-grid {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .testimonial-card {
+    width: 31%;
+  }
+}
 
 
 
@@ -516,4 +596,5 @@ h2 {
     .solution-text p {
         font-size: 1.1rem;
     }
+
 }
