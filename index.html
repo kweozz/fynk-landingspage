@@ -12,25 +12,34 @@
     <header class="hero">
         <nav class="navbar">
             <div class="logo">
-                <img src="assets/logo.svg" alt="FYNK logo" />
+                <a href="index.html"><img src="assets/logo.svg" alt="FYNK logo" /></a>
             </div>
             <button class="burger" aria-label="Menu">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
-            <div class="nav-menu">
-                <ul class="nav-links">
-                    <li><a href="#">Features</a></li>
-                    <li><a href="#">Pricing</a></li>
-                    <li><a href="#">About us</a></li>
-                </ul>
-                <div class="nav-cta">
-                    <a href="#" class="btn-secondary">Download the app</a>
-                    <a href="#" class="btn-outline">Talk to an expert</a>
-                </div>
-            </div>
         </nav>
+
+        <!-- Overlay & Menu -->
+        <div class="nav-overlay"></div>
+
+        <div class="nav-menu">
+            <div class="nav-menu-header">
+                <a href="index.html" class="logo"><img src="assets/logo.svg" alt="FYNK logo" /></a>
+                <button class="close-btn" aria-label="Sluit menu">×</button>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">About us</a></li>
+            </ul>
+            <div class="nav-cta">
+                <a href="#" class="btn-secondary">Download de app</a>
+                <a href="#" class="btn-outline">Talk to an expert</a>
+            </div>
+        </div>
+
 
         <div class="hero-content">
             <div class="hero-text">
@@ -229,6 +238,83 @@
             </div>
         </div>
     </section>
+    <section class="higher-education">
+        <h2>De stap naar het <strong>Hoger Onderwijs</strong></h2>
+        <p class="subtitle">
+            Hoe Fynk middelbare scholieren voorbereidt op het nieuwe ritme van het hoger onderwijs.
+        </p>
+
+        <div class="higher-edu-content">
+            <div class="edu-image">
+                <img src="assets/brain-grad.png" alt="Brein met diploma" />
+            </div>
+
+            <div class="edu-steps">
+                <div class="step">
+                    <div class="circle">1</div>
+                    <div>
+                        <h4>Routine bouwen</h4>
+                        <p>
+                            In het middelbaar krijg je structuur, in het hoger moet je die zelf creëren.
+                            Fynk helpt je nu al een vaste focusroutine op te bouwen.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="circle">2</div>
+                    <div>
+                        <h4>Creëer zelfstandigheid</h4>
+                        <p>
+                            Geen leerkrachten meer die je herinneren aan taken. Fynk leert je zelfstandig plannen,
+                            doelen stellen en starten — cruciaal in het hoger.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="circle">3</div>
+                    <div>
+                        <h4>Klaar voor de volgende stap</h4>
+                        <p>
+                            Met Fynk vertrek je niet blanco. Je leert focussen, krijgt grip op je studies en bouwt
+                            een systeem waar je in het hoger echt op kunt vertrouwen.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<section class="pricing-section">
+  <h2>Onze prijzen</h2>
+  <div class="pricing-cards">
+    <!-- Family Pack -->
+    <div class="pricing-card">
+      <div class="label">save 63%</div>
+      <h3>Family Pack</h3>
+      <img src="assets/family.png" alt="Family Pack icon" />
+      <div class="price"><strong>€ 12,99</strong><span>/monthly</span></div>
+      <ul>
+        <li>Up to 5 students included</li>
+        <li>Full access</li>
+      </ul>
+      <a href="#" class="btn-primary">Probeer 30 dagen gratis</a>
+    </div>
+
+    <!-- Individual -->
+    <div class="pricing-card">
+      <div class="label">popular</div>
+      <h3>Individual</h3>
+      <img src="assets/strong.png" alt="Individual icon" />
+      <div class="price"><strong>€ 6,99</strong><span>/monthly</span></div>
+      <ul>
+        <li>1 student included</li>
+        <li>Full access</li>
+      </ul>
+      <a href="#" class="btn-primary">Abonneren</a>
+    </div>
+  </div>
+</section>
 
 
 

@@ -1,16 +1,15 @@
-const burger = document.querySelector('.burger');
-const navMenu = document.querySelector('.nav-menu');
-const navOverlay = document.querySelector('.nav-overlay');
 
-burger.addEventListener('click', () => {
-  navMenu.classList.toggle('active');
-  navOverlay.classList.toggle('active');
-});
+  const burger = document.querySelector(".burger");
+  const navOverlay = document.querySelector(".nav-overlay");
+  const navMenu = document.querySelector(".nav-menu");
+  const closeBtn = document.querySelector(".close-btn");
 
-// Optional: close menu when clicking the overlay
-navOverlay.addEventListener('click', () => {
-  navMenu.classList.remove('active');
-  navOverlay.classList.remove('active');
-});
-// Parallax scrolling effect
+  function toggleMenu() {
+    navOverlay.classList.toggle("active");
+    navMenu.classList.toggle("active");
+  }
+
+  burger.addEventListener("click", toggleMenu);
+  closeBtn.addEventListener("click", toggleMenu);
+  navOverlay.addEventListener("click", toggleMenu); // ook sluiten bij klikken op overlay
 

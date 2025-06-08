@@ -70,28 +70,6 @@ body {
 
 }
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 2rem;
-    margin: 0;
-    padding: 0%;
-    width: 100%;
-    width: auto;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #1C2133;
-    font-weight: 500;
-}
-
-.nav-cta {
-    display: flex;
-    gap: 1rem;
-}
 
 /* Fynk-style Burger Button */
 .burger {
@@ -120,15 +98,17 @@ body {
     transition: 0.4s ease;
 }
 
+/* Overlay blur effect over hele scherm */
 .nav-overlay {
     position: fixed;
     inset: 0;
-    z-index: 15;
-    background: linear-gradient(135deg, rgba(236, 239, 253, 0.45) 0%, rgba(196, 207, 255, 0.45) 100%);
-    /* Lager alpha (0.45) voor meer transparantie */
+    z-index: 20;
+    background: rgba(236, 239, 253, 0.4);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.4s cubic-bezier(.4, 0, .2, 1);
+    transition: opacity 0.3s ease;
 }
 
 .nav-overlay.active {
@@ -136,40 +116,90 @@ body {
     pointer-events: auto;
 }
 
-/* Mobile Navigation */
+/* Verbeterde nav-menu popup */
 .nav-menu {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.95);
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 24px;
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    width: 90%;
+    max-width: 500px;
+    z-index: 30;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
     align-items: center;
-    font-size: 1.8rem;
-    position: absolute;
-    top: 5.5rem;
-    left: 50%;
-    transform: translateX(-50%) translateY(-20px);
-    width: 90%;
-    background: #F5F4FC;
-    /* Very soft pastel background */
-    border-radius: 24px;
-    padding: 2rem;
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+    gap: 2rem;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    z-index: 20;
+    transition: all 0.3s ease;
 }
 
 .nav-menu.active {
     opacity: 1;
     pointer-events: auto;
-    transform: translateX(-50%) translateY(0);
+    transform: translate(-50%, -50%) scale(1);
 }
+
+.nav-menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-menu-header .logo img {
+    height: 32px;
+}
+
+.close-btn {
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    color: #1C2133;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.nav-links a {
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: #1C2133;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #9CB0FF;
+}
+
+.nav-cta {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+
 
 .btn-primary,
 .btn-secondary,
 .btn-outline {
-    font-size: 1rem !important;
-    /* Force same size everywhere */
     padding: 0.75rem 1.5rem;
     border-radius: 16px;
     text-decoration: none;
@@ -183,21 +213,28 @@ body {
 .btn-primary,
 .btn-secondary {
     background-color: #1C2133;
-    color: white;
+    color: #fcfcfc;
 }
 
 .btn-outline {
-    border: 1.5px solid #1C2133;
+    border: 2px solid #1C2133;
     color: #1C2133;
     background: transparent;
 }
 
+.btn-primary:hover,
+.btn-secondary:hover,
 .btn-outline:hover {
-    background-color: #1C2133;
-    color: white;
+    background-color: #C4CFFF;
+    color: #1C2133;
 }
 
-
+.btn-outline:active,
+.btn-primary:active,
+.btn-secondary:active {
+    background-color: #9CB0FF;
+    color: #fcfcfc;
+}
 
 .hero-content {
     display: flex;
@@ -344,7 +381,6 @@ h2 {
 }
 
 .text-card h3 {
-    font-size: clamp(1.4rem, 4vw, 2rem);
     font-weight: bold;
     margin-bottom: 1rem;
 }
@@ -373,7 +409,7 @@ h2 {
 
 .solution-text h3 {
     font-family: 'Cabin', sans-serif;
-    font-size: 1.6rem;
+    font-size: 2rem;
     margin-bottom: 1rem;
     font-weight: 700;
 }
@@ -442,10 +478,10 @@ h2 {
 }
 
 .testimonial-card p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     line-height: 1.6;
     color: #1C2133;
-    font-weight: 500;
+    font-weight: medium;
 }
 
 .stars {
@@ -517,7 +553,7 @@ h2 {
 
 .cta-list li {
     margin-bottom: 0.75rem;
-    font-size: 1.05rem;
+    font-size: 1rem;
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -540,6 +576,187 @@ h2 {
     object-fit: contain;
 }
 
+/* Scroll animation for logo slider */
+.higher-education {
+  padding: 5% 10%;
+  text-align: center;
+}
+
+.higher-education h2 {
+  font-size: 2.5rem;
+  font-family: 'Cabin', sans-serif;
+  margin-bottom: 0.5rem;
+}
+
+.higher-education .subtitle {
+  font-size: 1rem;
+  color: #606370;
+  max-width: 600px;
+  margin: 0 auto 3rem;
+}
+
+.higher-edu-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+}
+
+.edu-image img {
+  max-width: 300px;
+  width: 100%;
+}
+
+.edu-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 600px;
+}
+
+.step {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.step .circle {
+  background: #9CB0FF;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.step h4 {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+}
+
+.step p {
+  margin: 0;
+  font-size: 1rem;
+  color: #606370;
+}
+
+
+
+/* Scroll animation for logo slider */
+.pricing-section {
+ margin: 5% 10%;
+    padding: 5%;
+    background: #cdd5ff;
+    border-radius: 24px;
+    text-align: center;
+}
+
+.pricing-section h2 {
+  font-family: 'Cabin', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1C2133;
+  margin-bottom: 3rem;
+}
+
+.pricing-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.pricing-card {
+  background: #f3edff;
+  border-radius: 24px;
+  padding: 2rem;
+  max-width: 100%;
+  max-width: 360px;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+
+.pricing-card:nth-child(2) {
+  background: #ffffff;
+}
+
+.pricing-card .label {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: #ececff;
+  color: #1c2133;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.3rem 0.7rem;
+  border-radius: 12px;
+}
+
+.pricing-card h3 {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.pricing-card img {
+  width: 120px;
+  height: auto;
+  margin: 1rem 0;
+}
+
+.pricing-card .price {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1C2133;
+}
+
+.pricing-card .price span {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #999;
+}
+
+.pricing-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+  color: #1C2133;
+}
+
+.pricing-card ul li {
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  position: relative;
+  padding-left: 1.4rem;
+}
+
+.pricing-card ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #9CB0FF;
+  font-weight: bold;
+}
+.pricing-card img{
+    border-radius: 100%;
+}
+
+
+/* Responsive layout */
+@media (min-width: 900px) {
+  .pricing-cards {
+    flex-direction: row;
+    gap: 3rem;
+  }
+}
 
 
 
@@ -569,24 +786,60 @@ h2 {
         align-items: center;
     }
 
+    .navbar {
+        display: none;
+    }
+
     .nav-menu {
         display: flex !important;
         flex-direction: row;
+        justify-content: space-between;
         align-items: center;
+        gap: 3rem;
         position: static;
         background: none;
         box-shadow: none;
         padding: 0;
-        gap: 2rem;
-        width: auto;
-        opacity: 1;
-        pointer-events: auto;
+        width: 100%;
+        opacity: 1 !important;
+        pointer-events: auto !important;
         transform: none;
-        font-size: 1.2rem;
-        transition: none !important;
+        max-width: 100%;
     }
 
-    .hero-text h1 {
+    .nav-cta {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-cta {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .burger {
+        display: none;
+    }
+
+    .nav-overlay {
+        display: none;
+    }
+
+    .close-btn {
+        display: none;
+    }
+
+    .cta .hero-text h1 {
         font-size: 3.5rem;
     }
 
@@ -606,11 +859,7 @@ h2 {
         max-width: 40%;
     }
 
-    .nav-links {
-        flex-direction: row;
-        gap: 2rem;
-        font-size: 1em;
-    }
+
 
     .section-cards {
         flex-direction: row;
@@ -687,4 +936,36 @@ h2 {
     .cta-section .text-card {
         width: 55%;
     }
+      .higher-edu-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .edu-image {
+    flex: 1;
+    text-align: center;
+  }
+
+  .edu-steps {
+    flex: 1;
+  }
+  .pricing-card{
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+}
+
+.pricing-card a.btn-primary,
+.pricing-card a.btn-secondary,
+.pricing-card a.btn-outline,
+.pricing-card button {
+    display: inline-block;
+    width: auto;
+    margin: 0 auto;
+    text-align: center;
+    white-space: normal;
+    max-width: 100%;
+    box-sizing: border-box;
 }
