@@ -12,3 +12,5 @@ navOverlay.addEventListener('click', () => {
   navMenu.classList.remove('active');
   navOverlay.classList.remove('active');
 });
+// Parallax scrolling effect
+
