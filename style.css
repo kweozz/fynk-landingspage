@@ -748,15 +748,54 @@ h2 {
 .pricing-card img{
     border-radius: 100%;
 }
-
-
-/* Responsive layout */
-@media (min-width: 900px) {
-  .pricing-cards {
-    flex-direction: row;
-    gap: 3rem;
-  }
+.newsletter {
+  background: #f5b9ff; /* lichtroze zoals screenshot */
+  padding: 5% 10%;
+  display: flex;
+  justify-content: center;
 }
+
+.newsletter-content {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.newsletter-content h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1C2133;
+  font-family: 'Cabin', sans-serif;
+  margin: 0;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.newsletter-form input[type="email"] {
+  padding: 1rem 1.5rem;
+  border-radius: 20px;
+  border: none;
+  font-size: 1rem;
+  min-width: 300px;
+  background: white;
+  color: #1C2133;
+  outline: none;
+}
+
+.newsletter-form input::placeholder {
+  color: #606370;
+}
+
+
+
+
 
 
 
@@ -955,8 +994,12 @@ h2 {
     max-width: 360px;
     margin: 0 auto;
   }
+  .newsletter-content {
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
 }
-
+}
 .pricing-card a.btn-primary,
 .pricing-card a.btn-secondary,
 .pricing-card a.btn-outline,
