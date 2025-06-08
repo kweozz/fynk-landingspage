@@ -578,79 +578,79 @@ h2 {
 
 /* Scroll animation for logo slider */
 .higher-education {
-  padding: 5% 10%;
-  text-align: center;
+    padding: 5% 10%;
+    text-align: center;
 }
 
 .higher-education h2 {
-  font-size: 2.5rem;
-  font-family: 'Cabin', sans-serif;
-  margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+    font-family: 'Cabin', sans-serif;
+    margin-bottom: 0.5rem;
 }
 
 .higher-education .subtitle {
-  font-size: 1rem;
-  color: #606370;
-  max-width: 600px;
-  margin: 0 auto 3rem;
+    font-size: 1rem;
+    color: #606370;
+    max-width: 600px;
+    margin: 0 auto 3rem;
 }
 
 .higher-edu-content {
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
 }
 
 .edu-image img {
-  max-width: 300px;
-  width: 100%;
+    max-width: 300px;
+    width: 100%;
 }
 
 .edu-steps {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 600px;
 }
 
 .step {
-  display: flex;
-  gap: 1.5rem;
-  align-items: flex-start;
-  text-align: left;
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    text-align: left;
 }
 
 .step .circle {
-  background: #9CB0FF;
-  color: white;
-  font-weight: bold;
-  font-size: 1.1rem;
-  border-radius: 50%;
-  width: 36px;
-  height: 36px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
+    background: #9CB0FF;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
 }
 
 .step h4 {
-  margin: 0 0 0.5rem;
-  font-size: 1.1rem;
+    margin: 0 0 0.5rem;
+    font-size: 1.1rem;
 }
 
 .step p {
-  margin: 0;
-  font-size: 1rem;
-  color: #606370;
+    margin: 0;
+    font-size: 1rem;
+    color: #606370;
 }
 
 
 
 /* Scroll animation for logo slider */
 .pricing-section {
- margin: 5% 10%;
+    margin: 5% 10%;
     padding: 5%;
     background: #cdd5ff;
     border-radius: 24px;
@@ -658,141 +658,197 @@ h2 {
 }
 
 .pricing-section h2 {
-  font-family: 'Cabin', sans-serif;
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #1C2133;
-  margin-bottom: 3rem;
+    font-family: 'Cabin', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1C2133;
+    margin-bottom: 3rem;
 }
 
 .pricing-cards {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
 }
 
 .pricing-card {
-  background: #f3edff;
-  border-radius: 24px;
-  padding: 2rem;
-  max-width: 100%;
-  max-width: 360px;
-  position: relative;
-  text-align: center;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    background: #f3edff;
+    border-radius: 24px;
+    padding: 2rem;
+    max-width: 100%;
+    max-width: 360px;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
 }
 
 .pricing-card:nth-child(2) {
-  background: #ffffff;
+    background: #ffffff;
 }
 
 .pricing-card .label {
-  position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
-  background: #ececff;
-  color: #1c2133;
-  font-size: 0.75rem;
-  font-weight: 600;
-  padding: 0.3rem 0.7rem;
-  border-radius: 12px;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: #ececff;
+    color: #1c2133;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.3rem 0.7rem;
+    border-radius: 12px;
 }
 
 .pricing-card h3 {
-  margin-top: 1rem;
-  font-size: 1.2rem;
-  font-weight: 600;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
 }
 
 .pricing-card img {
-  width: 120px;
-  height: auto;
-  margin: 1rem 0;
+    width: 120px;
+    height: auto;
+    margin: 1rem 0;
 }
 
 .pricing-card .price {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #1C2133;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #1C2133;
 }
 
 .pricing-card .price span {
-  font-size: 1rem;
-  font-weight: 400;
-  color: #999;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #999;
 }
 
 .pricing-card ul {
-  list-style: none;
-  padding: 0;
-  margin: 1.5rem 0;
-  color: #1C2133;
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+    color: #1C2133;
 }
 
 .pricing-card ul li {
-  margin-bottom: 0.75rem;
-  font-size: 1rem;
-  position: relative;
-  padding-left: 1.4rem;
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+    position: relative;
+    padding-left: 1.4rem;
 }
 
 .pricing-card ul li::before {
-  content: "✔";
-  position: absolute;
-  left: 0;
-  color: #9CB0FF;
-  font-weight: bold;
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #9CB0FF;
+    font-weight: bold;
 }
-.pricing-card img{
+
+.pricing-card img {
     border-radius: 100%;
 }
+
 .newsletter {
-  background: #f5b9ff; /* lichtroze zoals screenshot */
-  padding: 5% 10%;
-  display: flex;
-  justify-content: center;
+    background: #f5b9ff;
+    /* lichtroze zoals screenshot */
+    padding: 5% 10%;
+    display: flex;
+    justify-content: center;
 }
 
 .newsletter-content {
-  max-width: 1200px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  align-items: flex-start;
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: flex-start;
 }
 
 .newsletter-content h2 {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #1C2133;
-  font-family: 'Cabin', sans-serif;
-  margin: 0;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1C2133;
+    font-family: 'Cabin', sans-serif;
+    margin: 0;
 }
 
 .newsletter-form {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 .newsletter-form input[type="email"] {
-  padding: 1rem 1.5rem;
-  border-radius: 20px;
-  border: none;
-  font-size: 1rem;
-  min-width: 300px;
-  background: white;
-  color: #1C2133;
-  outline: none;
+    padding: 1rem 1.5rem;
+    border-radius: 20px;
+    border: none;
+    font-size: 1rem;
+    min-width: 300px;
+    background: white;
+    color: #1C2133;
+    outline: none;
 }
 
 .newsletter-form input::placeholder {
-  color: #606370;
+    color: #606370;
 }
 
+
+.site-footer {
+    background-color: #fcfcfc;
+    padding: 5% 10% 3%;
+    color: #1C2133;
+    font-family: 'Inter', sans-serif;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-logo {
+    height: 40px;
+}
+
+.footer-nav {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-nav li a {
+    text-decoration: none;
+    color: #1C2133;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.footer-nav li a:hover {
+    color: #9CB0FF;
+}
+
+.site-footer hr {
+    border: none;
+    border-top: 1px solid #dcdced;
+    margin: 2rem 0;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 0.95rem;
+}
 
 
 
@@ -975,31 +1031,35 @@ h2 {
     .cta-section .text-card {
         width: 55%;
     }
-      .higher-edu-content {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
 
-  .edu-image {
-    flex: 1;
-    text-align: center;
-  }
+    .higher-edu-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
 
-  .edu-steps {
-    flex: 1;
-  }
-  .pricing-card{
-    width: 100%;
-    max-width: 360px;
-    margin: 0 auto;
-  }
-  .newsletter-content {
-    flex-direction: row;
-    align-items: center;
-    text-align: center;
+    .edu-image {
+        flex: 1;
+        text-align: center;
+    }
+
+    .edu-steps {
+        flex: 1;
+    }
+
+    .pricing-cards {
+        width: 100%;
+        flex-direction: row;
+
+    }
+
+    .newsletter-content {
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+    }
 }
-}
+
 .pricing-card a.btn-primary,
 .pricing-card a.btn-secondary,
 .pricing-card a.btn-outline,
